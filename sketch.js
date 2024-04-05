@@ -22,7 +22,7 @@ function setup() {
     createCanvas(480, 640);
   }
   video = createCapture(VIDEO);
-  video.size(width / 2, height / 2);
+  video.size(width / 4, height / 4);
   pg = createGraphics(width, height);
   //video.filter(THRESHOLD)
 
@@ -66,8 +66,8 @@ function draw() {
     let rw = pose["nose"];
     //ellipse(width - rw.x, rw.y, 20, 20);
     //text("It's time",width - rw.x, rw.y,)
-    let rwx = (width / 2 - rw.x) * 2;
-    let rwy = rw.y * 2;
+    let rwx = (width / 4 - rw.x) * 4;
+    let rwy = rw.y * 4;
 
     dnose.unshift(createVector(rwx, rwy));
     pg.stroke(255, 0, 0);
