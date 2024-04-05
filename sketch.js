@@ -12,12 +12,17 @@ let poseNet;
 let poses = [];
 let le;
 let ang = 0;
+
 //let re
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+  if (windowWidth > windowHeight) {
+    createCanvas(640, 480);
+  } else {
+    createCanvas(480, 640);
+  }
   video = createCapture(VIDEO);
-  video.size(width / 4, height / 4);
+  video.size(width / 2, height / 2);
   pg = createGraphics(width, height);
   //video.filter(THRESHOLD)
 
@@ -61,8 +66,8 @@ function draw() {
     let rw = pose["nose"];
     //ellipse(width - rw.x, rw.y, 20, 20);
     //text("It's time",width - rw.x, rw.y,)
-    let rwx = (width / 4 - rw.x) * 4;
-    let rwy = rw.y * 4;
+    let rwx = (width / 2 - rw.x) * 2;
+    let rwy = rw.y * 2;
 
     dnose.unshift(createVector(rwx, rwy));
     pg.stroke(255, 0, 0);
