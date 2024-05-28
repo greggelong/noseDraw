@@ -17,13 +17,16 @@ let ang = 0;
 
 function setup() {
   pixelDensity(1);
+  /*
   if (windowWidth > windowHeight) {
     createCanvas(640, 480);
   } else {
     createCanvas(480, 640);
   }
+  */
+  createCanvase(windowWidth,windowHeight);
   video = createCapture(VIDEO);
-  video.size(width / 4, height / 4);
+  video.size(width / 10, height / 10);
   pg = createGraphics(width, height);
   //video.filter(THRESHOLD)
 
