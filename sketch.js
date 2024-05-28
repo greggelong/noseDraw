@@ -24,7 +24,7 @@ function setup() {
     createCanvas(480, 640);
   }
   */
-  createCanvase(windowWidth,windowHeight);
+  createCanvas(windowWidth,windowHeight);
   video = createCapture(VIDEO);
   video.size(width / 10, height / 10);
   pg = createGraphics(width, height);
