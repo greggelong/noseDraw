@@ -16,6 +16,7 @@ let ang = 0;
 //let re
 
 function setup() {
+  pixelDensity(1);
   if (windowWidth > windowHeight) {
     createCanvas(640, 480);
   } else {
