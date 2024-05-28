@@ -17,16 +17,16 @@ let ang = 0;
 
 function setup() {
   pixelDensity(1);
-  /*
+
   if (windowWidth > windowHeight) {
     createCanvas(640, 480);
   } else {
     createCanvas(480, 640);
   }
-  */
-  createCanvas(windowWidth,windowHeight);
+  
+  //createCanvas(windowWidth,windowHeight);
   video = createCapture(VIDEO);
-  video.size(width / 10, height / 10);
+  video.size(width / 4, height / 4);
   pg = createGraphics(width, height);
   //video.filter(THRESHOLD)
 
@@ -70,10 +70,10 @@ function draw() {
     let rw = pose["nose"];
     //ellipse(width - rw.x, rw.y, 20, 20);
     //text("It's time",width - rw.x, rw.y,)
-   // let rwx = (width / 4 - rw.x) * 4;  // changed from 4 top 10
-    //let rwy = rw.y * 4;
-    let rwx = (width / 10 - rw.x) * 10;  // changed from 4 top 10
-    let rwy = rw.y * 10;
+    let rwx = (width / 4 - rw.x) * 4;  // changed from 4 top 10
+    let rwy = rw.y * 4;
+    //let rwx = (width / 10 - rw.x) * 10;  // changed from 4 top 10
+    //let rwy = rw.y * 10;
 
     dnose.unshift(createVector(rwx, rwy));
     pg.stroke(255, 0, 0);
